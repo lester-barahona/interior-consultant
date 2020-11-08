@@ -51,15 +51,17 @@ header{
 
 .navigation{
     width: 100%;
-    height:calc( 100vh - var(--header-height));
+     height:100vh;/*calc( 100vh - var(--header-height)); */
     position: fixed;
-    top:var(--header-height);
+     top:0;/*var(--header-height); */
     right:-100%;
     transition: right .5s;
     background-color: var(--background-color);
     text-align: center;
     z-index: 100;
 }
+
+
 
 ul{
     position: relative;
@@ -98,6 +100,12 @@ ul{
     opacity:0;
     pointer-events: none;
 }
+
+.check:checked ~ .icon{
+    position: fixed;
+     z-index: 200;
+     right:10px;
+ }
 
 .icon > i{ 
     font-size: 36px; 
@@ -243,6 +251,7 @@ hr{
     
     header{
         width: 90%;
+       
     }
 
     .container{
